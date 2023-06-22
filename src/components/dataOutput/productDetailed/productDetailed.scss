@@ -1,0 +1,32 @@
+.productdetailed {
+	padding-bottom: rem(28);
+	//
+	display: grid;
+	row-gap: rem(20);
+	/*  */
+	&__notifybar {
+		// outline: 1px solid #f0f;
+	}
+	&__notify {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: rem(19);
+		@include bp(sm) {
+			font-size: rem(21);
+		}
+		@include bp(md) {
+			font-size: rem(23);
+		}
+		@include bp(lg) {
+			font-size: rem(25);
+		}
+		font-weight: bold;
+		/*  */
+		line-height: 1.15;
+		/*  */
+		word-wrap: break-word; /* old */
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+	&__body {}
+}

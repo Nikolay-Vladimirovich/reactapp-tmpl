@@ -1,0 +1,22 @@
+.fld--cb {
+	.label {
+		font-family: 'Montserrat';
+		font-weight: 300;
+		font-size: rem(11);
+		color: var(--sign-checkbox-label-font-color, #301411);
+		a {
+			padding-left: .34em;
+			color: inherit;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.fld--cb[required] {
+	// &::before {
+	// 	content: '*';
+	// 	font-weight: bold;
+	// 	font-size: rem(18);
+	// }
+}

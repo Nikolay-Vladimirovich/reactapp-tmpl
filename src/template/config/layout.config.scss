@@ -1,0 +1,30 @@
+$content-min-width: 340;
+$content-max-width: 1300;
+
+$container-min-width: 340;
+$container-design-width: 1300;
+$wide-container-max-width: 1920;
+
+$grid-breakpoints: (
+	floor: 0,
+	xs: 340,
+	sm: 576,
+	md: 768,
+	lg: 992,
+	xl: 1140,
+	ceil: $container-design-width,
+	deadline: $wide-container-max-width,
+) !default;
+
+$page-min-width: rem($container-min-width);
+$page-max-width: rem($container-design-width);
+
+$content-min-width: rem($content-min-width);
+$content-max-width: rem($content-max-width);
+:root {
+	--page-min-width: #{$page-min-width}; /* По-умолчанию = #{$page-min-width} = #{$container-min-width}px */
+	--page-max-width: #{$page-max-width}; /* По-умолчанию = #{$page-max-width} = #{$container-design-width}px */
+
+	--content-min-width: #{$content-min-width}; /* По-умолчанию = #{$content-min-width} = #{$content-min-width}px */
+	--content-max-width: #{$content-max-width}; /* По-умолчанию = #{$content-max-width} = #{$content-max-width}px */
+}

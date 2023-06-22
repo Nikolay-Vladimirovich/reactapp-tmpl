@@ -1,0 +1,40 @@
+.fld {
+	position: relative;
+	display: grid;
+// background: #08f;
+	grid-template:
+		// "label"
+		"input"
+		"validate-msg";
+	grid-template-columns: auto;
+
+	// min-height: rem(54);
+	// padding-bottom: rem(15);
+	
+	// .label {
+	// 	grid-area: label;
+	// 	width: max-content;
+	// 	padding-left: rem(7.5);
+	// 	padding-bottom: rem(3);
+	// }
+
+	.input {
+		grid-area: input;
+	}
+	.validate-msg {
+		grid-area: validate-msg;
+		padding-left: rem(19);
+	}
+
+	&.fld--required {
+		// &::before {
+		// 	grid-area: required;
+		// 	content: "*";
+		// 	padding-top: rem(6);
+		// 	padding-right: rem(3);
+		// }
+	}
+}
+.fld--invalid {
+	margin-bottom: rem(0);
+}

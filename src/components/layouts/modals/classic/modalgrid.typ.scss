@@ -1,0 +1,27 @@
+.modalgrid {
+	// font-family: Roboto;
+	color: #000;
+	&__upperbar {
+		.link {
+			border-radius: rem(4);
+			//
+			font-size: rem(14);
+			font-weight: bold;
+			line-height: math.div(16, 14);
+			//
+			text-decoration: none;
+			color: var(--sign-links-font-color, #1A226B);
+		}
+	}
+	&__headbar {
+		.title {
+			
+			font-size: rem(50);
+			line-height: 1;
+			//
+			color: #787878;
+			//
+			text-align: center;
+		}
+	}
+}

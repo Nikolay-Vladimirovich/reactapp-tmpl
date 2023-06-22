@@ -1,0 +1,23 @@
+.fld--txt {
+
+	.input {
+		//
+		border-radius: rem(10);
+		//
+		padding: rem(5) rem(13) rem(4);
+		//
+		border: rem(2) solid #787878;
+		
+	}
+}
+
+.fld--txt.fld--invalid {
+	&::before,
+	.label,
+	.validate-msg {
+		color: var(--sign-invalid-color, #CB2424);
+	}
+	.input {
+		border-color: var(--sign-invalid-color, #CB2424);
+	}
+}

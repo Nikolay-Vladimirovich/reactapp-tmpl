@@ -1,0 +1,18 @@
+.fld {
+	input {
+		font-family: Montserrat;
+	}
+	&.fld--required {
+		// &::before {
+		// 	content: "*";
+		// 	font-weight: bold;
+		// 	font-size: rem(18);
+		// 	color: #787878;
+		// }
+	}
+	.validate-msg {
+		font-size: rem(8);
+		font-family: 'Montserrat';
+		font-weight: 300;
+	}
+}

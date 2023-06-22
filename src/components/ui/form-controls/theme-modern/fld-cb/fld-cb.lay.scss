@@ -1,0 +1,43 @@
+/* input-checkbox */
+.fld--cb {
+	position: relative;
+	display: grid;
+	grid-template:
+		"label-with-decorated-checkbox"
+		"validate-msg"
+	;
+	grid-template-columns: auto;
+	align-items: start;
+
+	.input[type="checkbox"] {
+		// display: none;
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+	.label {
+		grid-area: label-with-decorated-checkbox;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+		padding-bottom: rem(0);
+	}
+	.input[type="checkbox"] + .label::before {
+		margin-right: rem(10);
+		// margin-bottom: rem(2);
+	}
+}
+.fld--cb {
+	// &::before {
+	// 	grid-area: required;
+	// 	content: '';
+	// 	padding-top: rem(1);
+	// 	padding-right: rem(3);
+	// 	line-height: .6;
+	// }
+}
+//
+.fld--cb {
+	// margin-top: rem(3);
+}

@@ -1,0 +1,47 @@
+.ordersum {
+	// background: #0f0;
+	&__content {
+		display: inline-grid;
+		grid-template-columns: auto min-content;
+
+		column-gap: rem(16);
+		align-items: center;
+		line-height: 1.2;
+	}
+
+	/* ==================== Внутри ordersum__content: начало  ==================== */
+	/* ===== Позиционирующие блоки : начало  ===== */
+	&__place {
+		// background: #f0f;
+	}
+	&__place--caption {
+		// white-space: nowrap;
+		// overflow: hidden;
+		// text-overflow: ellipsis;
+		// text-align: right;
+		// display: inline-flex;
+		// justify-content: flex-end;
+	}
+	&__place--pricesum {
+		line-height: 1.4;
+	}
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ===== Контент-элементы : начало  ===== */
+	&__caption {
+		text-align: right;
+		font-size: rem(18);
+		@include bp(sm) {
+			font-size: rem(19);
+		}
+		@include bp(md) {
+			font-size: rem(20);
+		}
+		@include bp(lg) {
+			font-size: rem(21);
+		}
+		// line-height: 1.2;
+		text-transform: uppercase;
+	}
+	/* ===== Контент-элементы : конец  ===== */
+	/* ==================== Внутри ordersum__content: конец  ==================== */
+}

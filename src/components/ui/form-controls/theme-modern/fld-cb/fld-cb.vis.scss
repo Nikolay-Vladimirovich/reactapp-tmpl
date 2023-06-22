@@ -1,0 +1,54 @@
+/* input-checkbox */
+.fld--cb {
+	.input[type="checkbox"] {
+		// display: none;
+	}
+	.input[type="checkbox"] + .label::before {
+		cursor: pointer;
+		content: "\2713";
+		color: transparent;
+		transition: color 0.25s;
+
+		width: rem(18);
+		height: rem(18);
+		border: rem(1) solid var(--sign-input-brd-color, #d58c51);
+		line-height: rem(16);
+		// padding: rem(2);
+		padding-left: rem(1);
+		border-radius: 50%;
+		//
+		font-weight: normal;
+		font-size: rem(11);
+		text-align: center;
+		// vertical-align: middle;
+
+		// background: #000;
+	}
+	.input[type="checkbox"]:checked + .label::before {
+		// content: "\2713";
+		color: var(--sign-checkbox-marker-color, #d58c51);
+		//
+	}
+	.input[type="checkbox"]:focus-visible + .label::before {
+		outline: rem(1) solid var(--outline-color, #d58c51);
+	}
+	.input[type="checkbox"] + .label:hover::before {
+		opacity: 0.75;
+		//
+	}
+}
+.fld--cb {
+	transition-property: height;
+	transition-duration: .25s;
+	height: rem(18);
+}
+.fld--cb.fld--invalid {
+	height: rem(36);
+	// &::before,
+	// .validate-msg {
+	// 	color: var(--sign-invalid-color, #FF0B0B);
+	// }
+	.input[type="checkbox"] + .label::before {
+		border-color: var(--sign-invalid-color, #ff0b0b);
+	}
+}

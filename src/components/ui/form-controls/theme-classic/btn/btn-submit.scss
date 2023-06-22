@@ -1,0 +1,31 @@
+/* -------------------- Кнопки : начало -------------------- */
+.btn-submit {
+	user-select: none;
+	border: none;
+	//
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	//
+	// font-family: Roboto;
+	font-size: rem(24);
+	font-weight: bold;
+	line-height: math.div(16, 24);
+	//
+	color: var(--sign-btn-font-color, #fff);
+	background-color: var(--sign-btn-bg-color, #1a226b);
+	//
+	padding: rem(18) rem(19) rem(18) rem(17);
+	//
+	border-radius: rem(10);
+	//
+	box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 25%);
+	&:hover,
+	&:focus-visible {
+		opacity: 0.9;
+	}
+	&:active {
+		opacity: 0.8;
+	}
+}
+/* -------------------- Кнопки : конец -------------------- */

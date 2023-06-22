@@ -1,0 +1,24 @@
+.fld--txt {
+	.label {
+		font-size: rem(16);
+		font-weight: bold;
+		line-height: 1;
+		//
+		color: var(--sign-labels-font-color, #787878);
+		//
+		cursor: pointer;
+	}
+	.input {
+		font-weight: bold;
+		font-size: rem(28);
+		line-height: math.div(36, 28);
+		// letter-spacing: em(-0.1);
+		// letter-spacing: normal;
+		//
+		color: #787878;
+		&::placeholder {
+			color: #ccc;
+		}
+	}
+	
+}

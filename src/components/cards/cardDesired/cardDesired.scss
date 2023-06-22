@@ -1,0 +1,78 @@
+.carddesired {
+	display: grid;
+	grid-template-areas:
+		"previewbar titlebar"
+		"previewbar ctrlsbar";
+	grid-template-rows: auto min-content;
+	grid-template-columns: minmax(rem(132), 1.5fr) 2fr;
+	column-gap: rem(12);
+	align-items: center;
+	// justify-content: space-between;
+	// background: #f00;
+	@include bp(sm) {
+		grid-template-areas: "previewbar titlebar ctrlsbar";
+		grid-template-columns: minmax(rem(96), rem(122)) minmax(4em, rem(310)) auto;
+		// column-gap: 24px;
+		column-gap: 10.2%;
+	}
+	// outline: 1px solid #d58c51;
+	color: #fff;
+	cursor: pointer;
+
+	& > * {
+		// outline: 1px solid #08f;
+	}
+	/*  */
+	&__previewbar {
+		grid-area: previewbar;
+	}
+	&__titlebar {
+		grid-area: titlebar;
+		padding-right: rem(8);
+	}
+	&__ctrlsbar {
+		grid-area: ctrlsbar;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__preview {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		// margin: 23px auto;
+		border-radius: 50%;
+	}
+	&__title {
+		font-size: rem(15);
+		@include bp(sm) {
+			font-size: rem(16);
+		}
+		@include bp(md) {
+			font-size: rem(16.5);
+		}
+		@include bp(lg) {
+			font-size: rem(17);
+		}
+		font-weight: 500;
+		line-height: 1.4;
+		/*  */
+		padding: rem(8) 0;
+		/*  */
+		/*  */
+		word-wrap: break-word; /* old name */
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+
+	// Активные состояния карточки
+	&:hover {
+		color: #d58c51;
+	}
+	&:focus-visible {
+		color: #d58c51;
+		outline: rem(2) solid #d58c51;
+	}
+	&:has(button:hover) {
+		color: inherit;
+	}
+}

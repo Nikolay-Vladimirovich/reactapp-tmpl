@@ -1,0 +1,10 @@
+.fld.fld--invalid {
+	&::before,
+	// .label,
+	.validate-msg {
+		color: var(--sign-invalid-color, #FF0B0B); // FF0B0B
+	}
+	.input {
+		// border-color: var(--sign-invalid-color, #FF0B0B);
+	}
+}

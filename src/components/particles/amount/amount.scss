@@ -1,0 +1,15 @@
+.amount {
+	font-size: rem(17);
+	white-space: nowrap;
+	&__value {
+		// font-variant-numeric: slashed-zero
+		
+		
+	}
+	&__units {
+		
+	}
+	&__value + &__units {
+		padding-left: rem(4);
+	}
+}

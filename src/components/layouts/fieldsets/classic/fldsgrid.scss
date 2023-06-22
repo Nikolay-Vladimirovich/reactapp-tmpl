@@ -1,0 +1,13 @@
+/*  */
+.fldsgrid {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__item {
+		&:not(:first-child) {
+			padding-top: rem(11);
+		}
+	}
+	&__fld {
+	}
+}

@@ -1,0 +1,60 @@
+/* ======================================== shopcartlist : начало  ======================================== */
+.shopcartlist {
+	padding-bottom: rem(28);
+	//
+	display: grid;
+	row-gap: rem(20);
+	width: 100%;
+	/* ===== Позиционирующие блоки : начало  ===== */
+	&__titlebar {
+		// outline: 1px solid #f00;
+	}
+	&__notifybar {
+		// outline: 1px solid #f0f;
+	}
+	&__body {
+		/* ==================== Внутри body : начало  ==================== */
+		display: grid;
+		row-gap: rem(31);
+		/* ==================== Внутри body : конец  ==================== */
+	}
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ===== Контент-элементы : начало  ===== */
+	&__title {
+		color: #fff;
+		text-transform: uppercase;
+		// font-size: 31px;
+		font-weight: bold;
+		/*  */
+		line-height: 1.15;
+		/*  */
+		word-wrap: break-word; /* old */
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+	&__notify {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: rem(21);
+		@include bp(sm) {
+			font-size: rem(22);
+		}
+		@include bp(md) {
+			font-size: rem(23);
+		}
+		@include bp(lg) {
+			font-size: rem(24);
+		}
+		font-weight: bold;
+		/*  */
+		line-height: 1.15;
+		/*  */
+		word-wrap: break-word; /* old */
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+	/* ===== Контент-элементы : конец  ===== */
+
+	/* ==================== Внутри mainbar__content : конец  ==================== */
+}
+/* ======================================== shopcartlist : конец  ======================================== */

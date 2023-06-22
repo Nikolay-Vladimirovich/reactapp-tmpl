@@ -1,0 +1,21 @@
+.fld--cb {
+	.label {
+		font-weight: 400;
+		font-size: rem(14);
+		color: var(--sign-checkbox-label-font-color, #787878);
+		a {
+			padding-left: .34em;
+			color: inherit;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.fld--cb[required] {
+	&::before {
+		content: '*';
+		font-weight: bold;
+		font-size: rem(18);
+	}
+}

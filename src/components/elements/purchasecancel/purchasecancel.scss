@@ -1,0 +1,43 @@
+.purchasecancel {
+	display: flex;
+	// outline: 1px solid #f00;
+	// padding: 1px;
+	align-items: center;
+	color: #D58C51;
+
+	width: min(100%, auto);
+
+	& > * {
+		// outline: 1px solid #08f;
+	}
+	
+	&__amount {
+		flex-grow: 1;
+		font-size: 80%;
+		white-space: nowrap;
+		padding-right: .25em;
+		opacity: 0.8;
+	}
+	&__cost {
+		// outline: 1px solid #0f0;
+		flex-grow: 1;
+		// flex-basis: min-content;
+		// background: #f888;
+		/*  */
+		display: flex;
+		flex-wrap: wrap;
+		//
+		align-items: flex-end;
+		line-height: 1.15;
+		// color: #D58C51;
+	}
+	&__ctrl {
+		// outline: 1px solid #08f;
+		flex-shrink: 0;
+		flex-basis: min-content;
+	}
+	&__cost + &__ctrl {
+		padding-left: rem(15);
+	}
+}
+

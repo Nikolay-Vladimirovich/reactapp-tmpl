@@ -1,0 +1,36 @@
+.ctrlsgrid {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	.ctrlslot {
+		// padding: 0.25em;
+		display: flex;
+	}
+}
+// .ctrlsgrid--start {
+// 	&::after {
+// 		content: '';
+// 		flex-grow: 1;
+// 		flex-shrink: 1;
+// 		flex-basis: auto;
+// 	}
+// }
+.ctrlsgrid--center {
+	&::before,
+	&::after {
+		content: "";
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		
+	}
+}
+.ctrlsgrid--end {
+	&::before {
+		content: "";
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+}

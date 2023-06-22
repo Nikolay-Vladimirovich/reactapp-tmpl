@@ -1,0 +1,16 @@
+.portion {
+	font-size: rem(14);
+	white-space: nowrap;
+	&__value {
+	}
+	&__units {
+	}
+	&__value + &__units {
+		padding-left: rem(3);
+	}
+}
+.productdetailed {
+	.portion {
+		font-size: rem(18);
+	}
+}

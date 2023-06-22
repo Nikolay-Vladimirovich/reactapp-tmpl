@@ -1,0 +1,118 @@
+.template {
+	--scrollbar-placeholder-width: #{rem(17)};
+	--content-maxwidth: var(--content-max-width);
+
+	// Переменные для страницы products
+	--header-minheight: auto;
+	--footer-height: #{rem(89)};
+	--main-height: calc(100vh - var(--header-minheight));
+	--side-padding: #{rem(10)};
+	@include bp(sm) {
+		--side-padding: #{rem(30)};
+		--header-minheight: #{rem(150)};
+	}
+	@include bp(md) {
+		--side-padding: #{rem(50)};
+	}
+	@include bp(lg) {
+		--side-padding: #{rem(70)};
+	}
+
+	&--shopcart {
+		// Переменные для страницы shopcart
+		.main,
+		.footer {
+			--content-maxwidth: #{rem(860)};
+		}
+
+		--main-height: calc(100vh - var(--header-minheight) - var(--footer-height));
+	}
+
+	/*  */
+	display: flex;
+	flex-direction: column;
+	/*  */
+	overflow-y: hidden;
+	&--sign {
+		overflow-y: auto;
+	}
+	// overflow-x: auto;
+	height: 100vh;
+	/*  */
+	display: flex;
+	flex-direction: column;
+	/*  */
+	/*  */
+	& > * {
+		// outline: 1px solid #f00;
+	}
+	.header,
+	.main,
+	.footer {
+		padding-left: var(--side-padding);
+		padding-right: var(--side-padding);
+		//
+		min-width: var(--page-min-width);
+		// max-width: var(--page-max-width);
+		//
+		&__layout {
+			width: 100%;
+			max-width: var(--content-maxwidth);
+			margin: 0 auto;
+			// outline: 1px dashed #0ff;
+		}
+	}
+	.header {
+		flex-shrink: 0;
+		flex-basis: min-content;
+		/*  */
+		position: relative;
+		z-index: 1;
+		//
+		// max-height: var(--header-minheight);
+		min-height: var(--header-minheight);
+
+		padding-right: calc(var(--side-padding) + var(--scrollbar-placeholder-width));
+		//
+		&__layout {
+			padding-top: rem(23);
+			padding-bottom: rem(8);
+			min-height: rem(129);
+			display: flex;
+			// justify-content: center;
+			align-items: center;
+		}
+	}
+	.main {
+		flex-shrink: 0;
+		flex-grow: 1;
+		flex-basis: auto;
+		//
+		overflow-y: scroll;
+		// Скролл нужен постоянно, т.к. если контента в main не будет, то и скролла не будет.
+		// а без него будет отсутствовать padding справа и ширина будет чуть больше чем у хедера и футера/
+		// TODO: Позже решу это через JS
+
+		// height: var(--main-height);
+		height: 1rem;
+		// Как ни странно, но достаточно любого значения высоты. Наверное она довычисляется да счет flex-grow: 1
+		// TODO: проверю позже это на кроссбраузерность
+
+		padding-top: rem(23); // * Высота эффекта перетекания (темного градиента) с header на main
+		//
+		position: relative;
+		z-index: 0;
+	}
+	.footer {
+		flex-shrink: 0;
+		flex-basis: min-content;
+		/*  */
+		position: relative;
+		z-index: 1;
+		//
+		// max-height: var(--footer-height);
+		min-height: var(--footer-height);
+		//
+		padding-right: calc(var(--side-padding) + var(--scrollbar-placeholder-width));
+	}
+}

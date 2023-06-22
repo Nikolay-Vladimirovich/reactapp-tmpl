@@ -1,0 +1,26 @@
+.price {
+	font-size: rem(17);
+	white-space: nowrap;
+	color: inherit;
+	&--shopcart {
+		color: #d58c51;
+	}
+
+	&__value {
+		// font-variant-numeric: slashed-zero
+		color: inherit;
+	}
+	&__currency {
+		color: inherit;
+	}
+	&__value + &__currency {
+		padding-left: rem(4);
+	}
+}
+/*  */
+.productdetailed {
+	.price {
+		font-size: rem(23);
+		font-weight: 500;
+	}
+}

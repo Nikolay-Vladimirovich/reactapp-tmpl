@@ -1,0 +1,48 @@
+.purchase {
+	display: flex;
+	align-items: center;
+
+	&__cost {
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		line-height: 1.15;
+	}
+	&__separator {
+		padding-left: rem(4);
+		padding-right: rem(4);
+	}
+	&__ctrl {
+		flex-shrink: 0;
+	}
+	&__cost + &__ctrl {
+		padding-left: rem(8);
+	}
+	&--carddetailed {
+		flex-direction: column;
+		// align-items: center;
+		@include bp(md) {
+			flex-direction: row;
+		}
+		.purchase__cost {
+			// flex-wrap: wrap;
+			justify-content: center;
+			@include bp(md) {
+				justify-content: stretch;
+			}
+		}
+		.purchase__cost + .purchase__ctrl {
+			padding-left: rem(0);
+			padding-top: rem(12);
+			@include bp(md) {
+				padding-left: rem(12);
+				padding-top: rem(0);
+			}
+		}
+		.purchase__separator {
+			font-size: rem(18);
+		}
+	}
+	
+}

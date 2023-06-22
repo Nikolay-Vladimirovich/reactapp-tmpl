@@ -1,0 +1,23 @@
+/*  */
+.formgrid {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__item {
+		&:not(:first-child) {
+			padding-top: rem(11);
+		}
+	}
+	&__fld {
+	}
+	&__mainbar {
+		
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+	&__footbar {
+		padding-top: rem(8);
+		padding-bottom: rem(22);
+	}
+}

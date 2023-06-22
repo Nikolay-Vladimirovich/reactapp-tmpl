@@ -1,0 +1,44 @@
+.modalgrid {
+	// font-family: Roboto;
+	color: #000;
+	&__upperbar {
+		.link {
+			border-radius: rem(4);
+			padding: rem(2);
+			margin: 0;
+			//
+			font-size: rem(11);
+			font-weight: 300;
+			// line-height: math.div(16, 14);
+			//
+			text-decoration: none;
+			color: var(--sign-links-font-color, #D58C51);
+			text-decoration: underline;
+			&:hover,
+			&:focus-visible {
+				text-decoration: none;
+			}
+			&:focus-visible {
+				outline: rem(1) solid #D58C51;
+			}
+			&:active {
+				opacity: 0.8;
+			}
+		}
+
+		
+	}
+	&__headbar {
+		.title {
+			
+			font-size: rem(31);
+			font-weight: bold;
+			line-height: 1;
+			text-transform: uppercase;
+			//
+			color: #161516;
+			//
+			text-align: center;
+		}
+	}
+}

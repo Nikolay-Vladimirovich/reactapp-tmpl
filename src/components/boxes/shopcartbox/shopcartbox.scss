@@ -1,0 +1,41 @@
+.shopcartbox {
+	display: inline-flex;
+	align-items: center;
+	// outline: 1px solid #0f0;
+
+	&__mainbar {
+		flex-shrink: 1;
+		flex-grow: 1;
+		flex-basis: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		/*  */
+		color: #fff;
+		/*  */
+		font-size: rem(17);
+		font-weight: 500;
+		/*  */
+		// outline: 1px solid #08f;
+	}
+	&__ctrlsbar {
+		// border: 1px solid #f00;
+		flex-shrink: 0;
+	}
+	&__mainbar + &__ctrlsbar {
+		margin-left: rem(20);
+	}
+	&__pricesum {
+		padding-top: rem(0);
+		@include bp(sm) {
+			white-space: nowrap;
+		}
+		// 
+
+		// background: #f0f;
+		& > span:first-child + span {
+			padding-left: rem(4);
+		}
+	}
+}

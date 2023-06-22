@@ -1,0 +1,21 @@
+/*  */
+.formgrid {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	& > * {
+		// outline: 1px solid red;
+	}
+	&__fld {
+	}
+	&__mainbar {
+		
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+	&__footbar {
+		padding-top: rem(4);
+		// padding-bottom: rem(22);
+	}
+}

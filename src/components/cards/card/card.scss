@@ -1,0 +1,75 @@
+.card {
+	display: grid;
+	grid-template-rows: auto min-content;
+	//
+	padding: rem(21);
+	// width: 300px;
+	border: rem(1) solid #D58C51;
+	color: #fff;
+	cursor: pointer;
+
+	
+	
+	& > * {
+		// outline: 1px solid #08f;
+	}
+	&__mainbar {}
+	&__footbar {
+		padding-top: rem(21);
+	}
+	/*  */
+	&__preview {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: rem(23) auto;
+		border-radius: 50%;
+	}
+	&__title {
+		font-size: rem(17);
+		font-weight: 500;
+		line-height: 1.2;
+		/*  */
+		padding: rem(8) 0;
+		/*  */
+		/*  */
+		word-wrap: break-word; /* old name */
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+	
+	&__description {
+		flex-grow: 1;
+		flex-basis: auto;
+		/*  */
+		padding: rem(5) 0;
+		/*  */
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: 1.2;
+		
+	}
+
+	// Активные состояния карточки
+	&:hover {
+		color: #D58C51;
+	}
+	&:focus-visible {
+		color: #D58C51;
+		outline: rem(2) solid #D58C51;
+	}
+	&:has(button:hover) {
+		color: inherit;
+	}
+	// &:hover,
+	// &:focus-within {
+	// 	color: #D58C51;
+	// 	// cursor: pointer;
+	// }
+	// &:has(button:hover) {
+	// 	color: #D58C51;
+	// }
+	/*  */
+}
+
+

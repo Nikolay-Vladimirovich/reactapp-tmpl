@@ -1,0 +1,40 @@
+.modalgrid {
+	background: #ccc;
+	display: flex;
+	flex-direction: column;
+	//
+	width: rem(600);
+	min-height: rem(412);
+
+	&__upperbar {
+		display: flex;
+		// border: 1px solid #0f0;
+		padding: .57rem .5rem 0;
+	}
+	&__headbar {
+		padding-bottom: rem(13);
+		.title {
+			// display: inline-flex;
+			// margin: 0 auto;
+			padding: 0;
+			margin: 0;
+			margin-top: rem(-2);
+			// line-height: ;
+		}
+	}
+	&__mainbar {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+	//
+	&__footbar {
+		
+	}
+}
+/* Внешнее позиционирование относительно каких-либо родительских блоков : начало */
+.template__modalgrid {
+	margin: auto;
+	outline: 1px solid red;
+}
+/* Внешнее позиционирование относительно каких-либо родительских блоков : конец */

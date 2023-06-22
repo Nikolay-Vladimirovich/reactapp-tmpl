@@ -1,0 +1,42 @@
+@mixin media($width) {
+	@media (min-width: em($width)) {
+		// Директива @content. Заменяет блок правил, который передается как содержимое миксина.
+		@content;
+	}
+}
+@mixin media-max($width) {
+	@media (max-width: em($width - 1)) {
+		@content;
+	}
+}
+@mixin media-min-and-max($width-min, $width-max) {
+	@media (min-width: em($width-min)) and (max-width: em($width-max - 1)) {
+		@content;
+	}
+}
+
+@mixin bp($name) {
+	$width: map-get($grid-breakpoints, $name);
+	@include media($width) {
+		@content;
+	}
+}
+
+@mixin bp-in($bp-start, $bp-end) {
+	$width-start: map-get($grid-breakpoints, $bp-start);
+	$width-end: map-get($grid-breakpoints, $bp-end);
+	@include media-min-and-max($width-start, $width-end) {
+		@content;
+	}
+}
+
+@mixin media-height-max($height) {
+	@media (max-height: em($height - 1)) {
+		@content;
+	}
+}
+@mixin media-height-min($height) {
+	@media (min-height: em($height)) {
+		@content;
+	}
+}

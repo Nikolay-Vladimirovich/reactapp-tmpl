@@ -1,0 +1,69 @@
+.modalgrid {
+	//
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	padding-left: rem(20);
+	padding-right: rem(20);
+
+	&__helper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+
+		min-width: rem(290);
+		max-width: rem(460);
+		
+		transition-duration: 0.5s;
+		transition-property: min-height;
+		min-height: 1rem;
+		@include bp(sm) {
+			min-height: rem(340);
+		}
+	}
+
+	&__upperbar {
+		display: flex;
+		margin-left: rem(20);
+		margin-right: rem(20);
+		// background: #ff0;
+		padding-top: rem(7);
+		padding-bottom: rem(13);
+	}
+	&__headbar {
+		// background: #0ff;
+		margin-left: rem(20);
+		margin-right: rem(20);
+		padding-bottom: rem(38);
+		.title {
+			// padding: 0;
+			// margin: 0;
+		}
+	}
+	&__mainbar {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		/*  */
+		transition-duration: 0.5s;
+		transition-property: padding-bottom;
+		padding-bottom: rem(24);
+	}
+	//
+	&__footbar {
+		
+	}
+}
+/* Внешнее позиционирование относительно каких-либо родительских блоков : начало */
+.template__modalgrid {
+	margin: auto;
+	@include bp(lg) {
+		padding-bottom: rem(24);
+	}
+}
+/* Внешнее позиционирование относительно каких-либо родительских блоков : конец */

@@ -1,0 +1,229 @@
+.btn {
+	font-family: Montserrat;
+	// /*  */
+	// box-sizing: padding-box; // !
+	// /*  */
+	user-select: none;
+	cursor: pointer;
+	/*  */
+	text-decoration: none; // Для ссылки
+
+	//
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	// aspect-ratio: 1;
+	//
+	border: none;
+	color: #fff;
+	border-color: #fff;
+	background-color: transparent;
+
+	transition-duration: 0.1s;
+	transition-property: min-width, background-color, color, border-color, opacity;
+
+	&__helper {
+		// border: 1px solid #f00;
+		// background: #f00;
+		display: grid;
+		width: 100%;
+		height: 100%;
+		// grid-template-columns: min-content auto;
+		grid-auto-flow: column;
+
+		justify-content: center;
+		align-items: center;
+
+		column-gap: rem(4);
+		// vertical-align: middle;
+	}
+	&__caption {
+		transition-duration: 0.1s;
+		transition-property: background-color, color, border-color, opacity;
+		/*  */
+		// width: auto;
+		// background: #0f0;
+		// padding-bottom: rem(1);
+		line-height: 1.2;
+	}
+	/* Иконки кнопки */
+	[data-icon] {
+		transition-duration: 0.1s;
+		transition-property: background-color, color, border-color, opacity;
+
+		min-width: min-content;
+		position: relative;
+		color: inherit;
+		display: inline-grid;
+		font-size: inherit;
+
+		&::before {
+			content: "";
+			color: inherit;
+			line-height: inherit;
+			transform: scale(
+				100.01%
+			); // * Этим я исправил баг со смещением иконки на очень мальенкое значение (<= 1px), который проявлялся при изменении шприны окна (хорошо видно было на маленьких разрешениях), но при этом не у всех иконок, а лишь у некоторых.
+		}
+		&[data-icon="plus"]::before {
+			content: "\271a";
+			font-size: rem(12);
+		}
+		&[data-icon="cross"]::before {
+			content: "\2715";
+			font-size: rem(12);
+			// line-height: rem(28);
+			// padding-left: rem(1);
+		}
+		&[data-icon="arrowleft"]::before {
+			content: "\27f5";
+			font-size: rem(10);
+		}
+		&[data-icon="shopcart"]::before {
+			content: "\1f4e5";
+			font-size: rem(21);
+		}
+	}
+}
+.btn {
+	/* Формы : начало */
+	&[data-figure*="circle"] {
+		border-radius: 50%;
+		border: rem(1) solid #fff;
+	}
+
+	&[data-figure*="square"] {
+		border-radius: 0;
+	}
+	/* Формы : конец */
+	/* ==================== Размеры : начало =================== */
+	/* ========== Размеры для круглых : начало ========== */
+	&[data-figure*="circle"][data-size*="small"] {
+		font-size: rem(20);
+		width: rem(30);
+		height: rem(30);
+		line-height: 1;
+		text-align: center;
+	}
+	&[data-figure*="circle"][data-size*="medium"] {
+		font-size: rem(21);
+		width: rem(50);
+		height: rem(50);
+		// padding-bottom: rem(1);
+		// border-width: 1px;
+		// line-height: 1.2;
+	}
+	/* ========== Размеры для круглых : конец ========== */
+	/* ========== Размеры для прямоугольных : начало ========== */
+	&[data-figure*="square"][data-size*="medium"] {
+		font-size: rem(14);
+		padding-left: rem(16);
+		padding-right: rem(16);
+		min-height: rem(42);
+		// min-width: max-content;
+		min-width: 1rem;
+		padding-top: rem(2);
+		transition-duration: 0.25s;
+		@include bp(sm) {
+			min-width: rem(170);
+		}
+		@include bp(md) {
+			min-width: rem(200);
+		}
+		text-align: center;
+	}
+	/* ========== Размеры для прямоугольных : конец ========== */
+	/* ==================== Размеры : конец ==================== */
+	/* Окружение (в каком компоненте находятся) кнопок : начало */
+	&[data-appearance*="shopcart"] {
+		color: #d58c51;
+		border-color: #d58c51;
+		border-width: rem(1);
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			opacity: 0.9;
+			color: #fff;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	&[data-appearance*="shopcart"][data-figure*="circle"][data-size*="medium"] {
+		color: #fff;
+		background-color: #d58c51;
+	}
+	&[data-appearance*="shopcart"][data-figure*="square"] {
+		font-size: rem(14);
+		font-weight: 400;
+		color: #131313;
+		border-color: #d58c51;
+		background-color: #d58c51;
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	/*  */
+	&[data-appearance*="form"][data-figure*="square"] {
+		font-size: rem(14);
+		font-weight: 400;
+		color: #131313;
+		border-color: #d58c51;
+		background-color: #d58c51;
+
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	/*  */
+
+	&[data-appearance*="auth"][data-figure*="square"][data-size*="medium"] {
+		color: #d58c51;
+		background-color: transparent;
+		border: rem(1) solid #d58c51;
+	}
+	&[data-appearance*="auth"] {
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	/* Окружение (в каком компоненте находятся) кнопок : конец */
+}
+.btn {
+	// Активные состояния кнопки : начало
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		color: #fff;
+		border-color: #d58c51;
+		background-color: #d58c51;
+		text-decoration: none;
+	}
+	&:focus-visible {
+		outline: rem(2) solid #d58c51;
+	}
+
+	&:active {
+		opacity: 0.8;
+		text-decoration: none;
+	}
+	// Активные состояния кнопки : конец
+}

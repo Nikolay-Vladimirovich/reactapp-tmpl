@@ -1,0 +1,44 @@
+/* input-checkbox */
+.fld--cb {
+	.input[type="checkbox"] {
+		// display: none;
+	}
+	.input[type="checkbox"] + .label::before {
+		cursor: pointer;
+		content: "";
+		
+		width: rem(24);
+		height: rem(24);
+		border: rem(2) solid var(--sign-input-brd-color, #787878);
+		padding: rem(2);
+		border-radius: rem(7);
+		//
+		font-weight: bold;
+		font-size: rem(17);
+		text-align: center;
+		color: var(--sign-checkbox-marker-color, #787878);
+	}
+	.input[type="checkbox"]:checked + .label::before {
+		content: "\2713";
+		//
+	}
+	.input[type="checkbox"]:focus-visible + .label::before {
+		outline: rem(3) solid var(--outline-color, #4bf);
+	}
+	.input[type="checkbox"] + .label:hover::before {
+		opacity: 0.75;
+		//
+	}
+}
+.fld--cb {
+	margin-top: rem(3);
+}
+.fld--cb.fld--invalid {
+	&::before,
+	.validate-msg {
+		color: var(--sign-invalid-color, #CB2424);
+	}
+	.input[type="checkbox"] + .label::before {
+		border-color: var(--sign-invalid-color, #CB2424);
+	}
+}

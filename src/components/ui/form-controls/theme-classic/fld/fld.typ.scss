@@ -1,0 +1,14 @@
+.fld {
+	&.fld--required {
+		&::before {
+			content: "*";
+			font-weight: bold;
+			font-size: rem(18);
+			color: #787878;
+		}
+	}
+	.validate-msg {
+		font-size: rem(10);
+		font-weight: 500;
+	}
+}
