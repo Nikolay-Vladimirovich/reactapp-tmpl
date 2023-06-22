@@ -1,6 +1,6 @@
 {
-  "name": "foodshop",
-  "homepage": "/foodshop",
+  "name": "fastnode",
+  "homepage": "/fastnode",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,9 +19,9 @@
   },
   "scripts": {
     "start": "craco start",
-    "start-foodshop": "craco start --base-url=/foodshop",
+    "start-fastnode": "craco start --base-url=/fastnode",
     "build": "craco build",
-    "build-foodshop": "craco build --base-url=/foodshop",
+    "build-fastnode": "craco build --base-url=/fastnode",
     "test": "craco test",
     "eject": "craco eject"
   },
