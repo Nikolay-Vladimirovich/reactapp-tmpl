@@ -1,0 +1,8 @@
+.copyright {
+	// background: #0f0;
+	> [class$="__body"] {
+		text-align: center;
+		font-size: rem(14);
+		line-height: math.div(24, 14);
+	}
+}

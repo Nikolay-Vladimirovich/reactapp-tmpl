@@ -1,0 +1,24 @@
+// /* ========== Темная цветовая схема : начало ========== */
+/* ========== Кнопки : начало ========== */
+:root {
+	--btn-social-bgcolor: rgba(224, 224, 255, 0.06);
+	--btn-social-fcolor: #e0e0ff;
+
+	// Base
+	// ===== Primary =====
+	--btn-fcolor-default-light: #fff;
+	--btn-fcolor-default-dark: #282a2e;
+	--btn-fcolor-disabled-light: rgba(224, 224, 255);
+	--btn-fcolor-disabled-dark: rgba(40, 42, 46);
+	//
+	--btn-fcolor-default: var(--btn-fcolor-default-dark); //
+	--btn-fcolor-disabled: var(--btn-fcolor-disabled-dark);
+	//
+	--btn-base-secondary-fcolor-default: rgba(25, 218, 235);
+	--btn-base-secondary-fcolor-disabled: rgba(25, 218, 235);
+
+	// Pure buttons = begin
+	--btn-pure-fcolor-default: rgb(25, 218, 235);
+}
+/* ========== Кнопки : конец ========== */
+// /* ========== Темная цветовая схема : конец ========== */

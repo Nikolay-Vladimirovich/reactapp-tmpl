@@ -7,65 +7,10 @@ body {
 	}
 }
 .template {
-	background-color: #161516;
-	color: #fff;
-	font-family: Montserrat, Arial;
-
-	letter-spacing: 0.02em;
-	&--sign {
-		background: url("./assets/sign-bg.jpg") 50% 50%;
-		background-size: cover;
-	}
-	&--productdetailed {
-		background: url("./assets/productdetailed-bg.jpg") 50% 50%;
-		background-size: contain;
-		@include media-height-max(732) { // 732 - это высота исходного изображения
-			background-size: cover;
-		}
-		@include media-height-min(732) {
-			background-size: contain;
-		}
-	}
 	.header {
-		background-color: #161516;
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: rem(-23);
-			left: 0;
-			right: var(--scrollbar-placeholder-width);
-			height: rem(23);
-			background-image: linear-gradient(to bottom, rgba(22, 21, 22, 1) 0, rgba(22, 21, 22, 0) rem(16));
-		}
+		background-color: #333;
 	}
 	.footer {
-		background-color: #161516;
-		border-top: 1px solid #d58c51;
-		&::before {
-			// outline: 1px solid lime;
-			content: "";
-			display: block;
-			position: absolute;
-			top: rem(-24);
-			left: 0;
-			right: var(--scrollbar-placeholder-width);
-			height: rem(23);
-			background-image: linear-gradient(to top, rgba(22, 21, 22, 1) 0, rgba(22, 21, 22, 0) rem(16));
-		}
-	}
-	&--productdetailed {
-		.header {
-			background: none;
-			&::after {
-				display: none;
-			}
-		}
-		.footer {
-			background-color: transparent;
-			&::before {
-				display: none;
-			}
-		}
+		background-color: #333;
 	}
 }

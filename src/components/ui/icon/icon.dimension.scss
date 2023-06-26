@@ -1,0 +1,23 @@
+[data-icon^="soc-"]::before {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+[data-icon="soc-discord"]::before {
+	content: "\e900";
+}
+[data-icon="soc-linkedin"]::before {
+	content: "\e901";
+}
+[data-icon="soc-reddit"]::before {
+	content: "\e902";
+}
+[data-icon="soc-telegram"]::before {
+	content: "\e903";
+}
+[data-icon="soc-twitter"]::before {
+	content: "\e904";
+}
+[data-icon="soc-youtube"]::before {
+	content: "\e905";
+}

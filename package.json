@@ -10,9 +10,11 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-select": "^5.7.3",
     "redux": "^4.2.1",
     "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
@@ -35,16 +37,19 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "safari >= 12.1"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "safari >= 12.1"
     ]
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier": "^2.8.8",
     "sass": "^1.62.0"
   }
 }

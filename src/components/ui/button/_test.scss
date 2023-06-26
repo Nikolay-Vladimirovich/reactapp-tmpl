@@ -1,0 +1,11 @@
+.fldstest {
+	display: grid;
+	grid-template-columns: max-content max-content max-content;
+	justify-content: end;
+	justify-items: end;
+	// grid-auto-column: 200px;
+	// grid-auto-flow: repeat(3, max-content);
+	// grid-auto-columns: min-content;
+	gap: rem(32);
+	padding: rem(32);
+}

@@ -1,11 +1,11 @@
-@import 'layout.config';
+// @import "layout.config";
 // /* ========== Кастомизация цветовой схемы : начало ========== */
 
 // /* ========== Кастомизация цветовой схемы : конец ========== */
 /* ========== Общая кастомизация : начало ========== */
 :root {
 	--body-font-family: Montserrat;
-	--simple-transition-duration: 0.25s; /* Скорость простых анимаций */
+	--simple-transition-duration: 0.15s; /* Скорость простых анимаций */
 	--simple-transition-delay: 0s;
 	// --navbar-toggle-duration: 0.5s; /* Скорость анимаций появления меню */
 	/* Кнопка переключения меню: */

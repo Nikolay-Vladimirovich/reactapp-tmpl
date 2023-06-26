@@ -1,73 +1,99 @@
-import "./button.scss";
-import Icon from "@components/ui/icon";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+
+import useBEM from '@hooks/useBEM'
+
+import Icon from '@components/ui/icon'
+
+import './_init.scss'
 
 function Button({
 	link = false,
-	buttonType,
-	to = "/",
+	to = '/',
 	caption,
-	category = "primary",
-	appearance,
-	size = "medium",
+	face = 'base',
+	accent = 'primary',
+	theme,
 	icon,
-	iconPosition = "left",
-	figure = "rounded",
+	ipos = 'start',
 	clickHandler,
-	preventDefault = "true",
-	stopPropagation = "true",
+	preventDefault = 'true',
+	stopPropagation = 'true',
+	bem = {},
+	...rest
 }) {
-	// let ico = icon ?? category ?? '';
-	let captionHTML = caption ? <span className="btn__caption">{caption}</span> : "";
+	const cn = 'btn'
+	const [cnfull] = useBEM({ cn, bem })
+	// let ico = icon ?? accent ?? '';
+	let captionHTML = caption ? (
+		<span className='btn__caption'>{caption}</span>
+	) : (
+		''
+	)
 	if (!link) {
 		return (
 			<button
-				type={buttonType}
-				className="btn"
-				data-category={category}
-				data-appearance={appearance}
-				data-size={size}
-				data-figure={figure}
-				onClick={(e) => {
-					if (!clickHandler) return;
-					if (preventDefault) e.preventDefault();
-					if (stopPropagation) e.stopPropagation();
-					clickHandler();
+				onClick={e => {
+					if (!clickHandler) return
+					if (preventDefault) e.preventDefault()
+					if (stopPropagation) e.stopPropagation()
+					clickHandler()
 				}}
-				onKeyDown={(e) => {
-					if (!clickHandler) return;
-					if (e.code === "Space" || e.code === "Enter") {
-						if (preventDefault) e.preventDefault();
-						if (stopPropagation) e.stopPropagation();
-						clickHandler();
+				onKeyDown={e => {
+					if (!clickHandler) return
+					if (e.code === 'Space' || e.code === 'Enter') {
+						if (preventDefault) e.preventDefault()
+						if (stopPropagation) e.stopPropagation()
+						clickHandler()
 					}
 				}}
+				data-face={face}
+				data-accent={accent}
+				data-theme={theme}
+				{...rest}
+				className={cnfull}
 			>
-				<span className="btn__helper">
-					{iconPosition === "left" ? icon ? <Icon icon={icon} /> : "" : ""}
+				<span className='btn__decorator'></span>
+				<span className='btn__helper'>
+					{ipos === 'start' ? (
+						icon ? (
+							<Icon icon={icon} bem={{ prefix: 'btn' }} />
+						) : (
+							''
+						)
+					) : (
+						''
+					)}
 					{captionHTML}
-					{iconPosition === "right" ? icon ? <Icon icon={icon} /> : "" : ""}
+					{ipos === 'end' ? (
+						icon ? (
+							<Icon icon={icon} bem={{ prefix: 'btn' }} />
+						) : (
+							''
+						)
+					) : (
+						''
+					)}
 				</span>
 			</button>
-		);
+		)
 	} else {
 		return (
 			<Link
-				className="btn"
-				data-category={category}
-				data-appearance={appearance}
-				data-size={size}
-				data-figure={figure}
+				className={cnfull}
+				data-face={face}
+				data-accent={accent}
+				data-theme={theme}
 				to={to}
 				// onClick={()=>{clickHandler()}}
 			>
-				<span className="btn__helper">
-					{iconPosition === "left" ? icon ? <Icon icon={icon} /> : "" : ""}
+				<span className='btn__decorator'></span>
+				<span className='btn__helper'>
+					{ipos === 'start' ? icon ? <Icon icon={icon} /> : '' : ''}
 					{captionHTML}
-					{iconPosition === "right" ? icon ? <Icon icon={icon} /> : "" : ""}
+					{ipos === 'end' ? icon ? <Icon icon={icon} /> : '' : ''}
 				</span>
 			</Link>
-		);
+		)
 	}
 }
-export default Button;
+export default Button

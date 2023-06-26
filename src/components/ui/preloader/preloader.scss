@@ -10,9 +10,8 @@
 	justify-content: center;
 
 	&__helper {
-		
 		--clock-color: #51bbd5;
-		--clock-width: 4rem;
+		--clock-width: 1rem;
 		--clock-radius: calc(var(--clock-width) / 2);
 		--clock-minute-length: calc(var(--clock-width) * 0.4);
 		--clock-hour-length: calc(var(--clock-width) * 0.2);

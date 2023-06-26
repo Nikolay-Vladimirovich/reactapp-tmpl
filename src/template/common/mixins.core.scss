@@ -16,15 +16,15 @@
 }
 
 @mixin bp($name) {
-	$width: map-get($grid-breakpoints, $name);
+	$width: map-get($tmpl-breakpoints, $name);
 	@include media($width) {
 		@content;
 	}
 }
 
 @mixin bp-in($bp-start, $bp-end) {
-	$width-start: map-get($grid-breakpoints, $bp-start);
-	$width-end: map-get($grid-breakpoints, $bp-end);
+	$width-start: map-get($tmpl-breakpoints, $bp-start);
+	$width-end: map-get($tmpl-breakpoints, $bp-end);
 	@include media-min-and-max($width-start, $width-end) {
 		@content;
 	}

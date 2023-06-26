@@ -1,4 +1,12 @@
 @import "fonts/fonts";
 @import "base/reset";
+//
+@import "config/base.config.scss";
+//
+@import "config/theme.dark.scss";
+//
+@import "theme/dark/_init.scss";
+//
 @import "template.layout";
+@import "template.typography";
 @import "template.visual";

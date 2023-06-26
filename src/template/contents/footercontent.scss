@@ -1,0 +1,26 @@
+.footercontent {
+	display: grid;
+	grid-auto-flow: row;
+	align-items: center;
+	justify-content: stretch;
+	// background: #f00;
+
+	/* ==================== Внутри footercontent : начало  ==================== */
+	/* ===== Позиционирующие блоки : начало  ===== */
+	&__place {
+		// background: #f00;
+	}
+	&__place--a {
+		// outline: 1px solid #f00;
+		// display: inline-flex;
+		// display: flex;
+		width: 100%;
+		// background: #000;
+	}
+	&__place--b {
+		// outline: 1px solid #0f0;
+		// background: #ff0;
+	}
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ==================== Внутри footercontent : конец  ==================== */
+}
